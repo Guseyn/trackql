@@ -1,7 +1,7 @@
 # trackql
 GraphQL Service in Node.js for Arc Cloud with SQLite database.
 
-# How to Run In Dev Mode
+# Run In Dev Mode
 
 `npm run dev`
 
