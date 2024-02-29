@@ -7,7 +7,7 @@
     "start": "node dist/app.js",
     "dev": "nodemon --exec ts-node src/app.ts",
     "build": "tsc",
-    "lint": "eslint -c .eslintrc.json src --quiet",
+    "lint": "eslint -c .eslintrc.json src/**/*.ts --quiet",
     "test": "ts-node src/integration.test.ts",
     "db:recreate": "rm src/db/data/sqlite.db && touch src/db/data/sqlite.db"
   },
