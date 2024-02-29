@@ -12,13 +12,8 @@ export async function updateTrackById (
   const { id, name, artistName } = args;
 
   const db = await openDatabase(dbFile)
-  console.log(`
-                    UPDATE tracks SET name='${name}', artistName='${artistName}' WHERE id=${id}
-                `)
   const updatedTrack: RunResult = await executeInDatabase(
-    db, `
-                    UPDATE tracks SET name='${name}', artistName='${artistName}' WHERE id=${id}
-                `
+    db, `UPDATE tracks SET name='${name}', artistName='${artistName}' WHERE id=${id}`
   );
   db.close()
   if (updatedTrack.changes > 0) {

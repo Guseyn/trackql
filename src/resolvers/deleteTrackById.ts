@@ -11,9 +11,7 @@ export async function deleteTrackById (
 
   const db = await openDatabase(dbFile)
   const deletedTrack: RunResult = await executeInDatabase(
-    db, `
-        DELETE from tracks WHERE id='${id}'
-    `
+    db, `DELETE from tracks WHERE id='${id}'`
   );
   db.close()
   if (deletedTrack.changes > 0) {
