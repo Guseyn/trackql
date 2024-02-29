@@ -1,28 +1,14 @@
-import {gql} from "apollo-server";
-import {DocumentNode} from "graphql/language";
+import { readFileSync } from 'fs';
+import { buildSchema } from 'graphql';
+import { loadSchemaSync } from '@graphql-tools/load';
+import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader';
 
-export const SCHEMA: DocumentNode = gql`
-    type Track {
-        id: Int
-        name: String
-        artistName: String
-        duration: String
-        isrc: String
-        releaseDate: String
-    }
+const schemaFilePath = './src/graphql/schema.graphql';
 
-    type ActionResponse {
-        status: String
-    }
+const schemaString = readFileSync(schemaFilePath, 'utf8');
 
-    type Query {
-        allTracks: [Track]
-        track(id: ID!): Track
-    }
+const loadedSchema = loadSchemaSync(schemaFilePath, {
+  loaders: [new GraphQLFileLoader()],
+});
 
-    type Mutation {
-        createIfMissingAndGetTrackByNameAndArtistName(name: String, artistName: String): Track!,
-        updateTrackById(id: ID, name: String, artistName: String): ActionResponse!,
-        deleteTrackById(id: ID): ActionResponse!,
-    }
-`;
+export const SCHEMA = buildSchema(schemaString)
