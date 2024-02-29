@@ -1,7 +1,7 @@
-import {openDatabase} from "../db/openDatabase";
-import {RunResult} from "sqlite3";
-import {executeInDatabase} from "../db/executeInDatabase";
-import {Context} from "../Context";
+import { openDatabase } from "../db/openDatabase";
+import { RunResult } from "sqlite3";
+import { executeInDatabase } from "../db/executeInDatabase";
+import { Context } from "../Context";
 
 export async function updateTrackById (
   _: any,

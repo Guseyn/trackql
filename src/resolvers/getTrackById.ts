@@ -1,7 +1,7 @@
-import {openDatabase} from "../db/openDatabase";
-import {Track} from "../types/Track";
-import {selectFromDatabase} from "../db/selectFromDatabase";
-import {Context} from "../Context";
+import { openDatabase } from "../db/openDatabase";
+import { Track } from "../types/Track";
+import { selectFromDatabase } from "../db/selectFromDatabase";
+import { Context } from "../Context";
 
 export async function getTrackById (
   _: any, args: { id: number }, context: Context

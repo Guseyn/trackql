@@ -6,7 +6,7 @@ import { openDatabase } from "../db/openDatabase";
 import { selectFromDatabase } from "../db/selectFromDatabase";
 import {executeInDatabase} from "../db/executeInDatabase";
 import { Context } from "../Context";
-import {RunResult} from "sqlite3";
+import { RunResult } from "sqlite3";
 
 export async function createIfMissingAndGetTrackByNameAndArtistName (
   _: any, args: { name: string, artistName: string }, context: Context

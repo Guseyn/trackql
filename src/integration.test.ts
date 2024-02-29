@@ -1,6 +1,6 @@
 import { server } from "./server";
 import { createSQLSchema } from "./db/createSQLSchema";
-import axios, {AxiosResponse} from "axios";
+import axios, { AxiosResponse } from "axios";
 import assert from "assert";
 
 const DB_FILE = './src/db/data/sqlite.db';

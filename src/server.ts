@@ -1,7 +1,7 @@
 import {ApolloServer, AuthenticationError} from "apollo-server";
-import {schema as typeDefs} from "./schema";
-import {resolvers} from "./resolvers/exports";
-import {Context} from "./Context";
+import { schema as typeDefs } from "./schema";
+import { resolvers } from "./resolvers/exports";
+import { Context } from "./Context";
 
 const DB_FILE = './src/db/data/sqlite.db'
 
