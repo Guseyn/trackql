@@ -31,9 +31,10 @@ export async function createIfMissingAndGetTrackByNameAndArtistName (
     }
     const insertedTrack: RunResult = await executeInDatabase(
       db, `
-                    INSERT INTO tracks(name, artistName, duration, isrc, releaseDate) 
-                    VALUES ('${track.name}', '${track.artistName}', '${track.duration}', '${track.isrc}', '${track.releaseDate}')
-                `
+        INSERT INTO
+        tracks(name, artistName, duration, isrc, releaseDate)
+        VALUES ('${track.name}', '${track.artistName}', '${track.duration}', '${track.isrc}', '${track.releaseDate}')
+      `
     );
     db.close()
     track.id = insertedTrack.lastID;
