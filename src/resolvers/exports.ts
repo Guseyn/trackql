@@ -5,13 +5,13 @@ import { deleteTrackById } from "./deleteTrackById";
 import { updateTrackById } from "./updateTrackById";
 
 export const resolvers = {
-    Query: {
-        allTracks: getAllTracks,
-        track:  getTrackById
-    },
-    Mutation: {
-        createIfMissingAndGetTrackByNameAndArtistName,
-        deleteTrackById,
-        updateTrackById
-    }
+  Query: {
+    allTracks: getAllTracks,
+    track:  getTrackById
+  },
+  Mutation: {
+    createIfMissingAndGetTrackByNameAndArtistName,
+    deleteTrackById,
+    updateTrackById
+  }
 }

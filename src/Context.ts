@@ -1,4 +1,4 @@
 export type Context = {
-    token: string,
-    dbFile: string
+  token: string,
+  dbFile: string
 }
