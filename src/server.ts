@@ -1,5 +1,5 @@
 import {ApolloServer, AuthenticationError} from "apollo-server";
-import {SCHEMA as typeDefs} from "./schema";
+import {schema as typeDefs} from "./schema";
 import {resolvers} from "./resolvers/exports";
 import {Context} from "./Context";
 
